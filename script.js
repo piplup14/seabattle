@@ -39,8 +39,14 @@ const show ={
 
 const fire = (event) => {
     const target = event.target;
-    show.miss(target);
-    play.updateData = 'shot';
+    if (!target.classList.contains('miss')){
+        show.miss(target);
+        play.updateData = 'shot';
+        console.log('ready');
+    } else {
+        console.log('Уже выстрелил');
+        
+    }
         
 };
 
